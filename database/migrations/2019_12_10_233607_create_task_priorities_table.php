@@ -15,7 +15,8 @@ class CreateTaskPrioritiesTable extends Migration
     {
         Schema::create('task_priorities', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
+            $table->integer('order');
+            $table->string('name')->unsigned();
         });
     }
 

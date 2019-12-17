@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.sorting {
+    margin-left: 2px;
+    float: right;
+}
+.sorting > .sorting-arrow {
+    cursor: pointer;
+    display: block;
+}
+
+.vcenter {
+    vertical-align: middle;
+    float: none;
+    display: inline-block;
+}
+
+.tasks-pagination > nav {
+    text-align: center;
+}
+.tasks-pagination > nav > ul {
+    margin: auto;
+}
