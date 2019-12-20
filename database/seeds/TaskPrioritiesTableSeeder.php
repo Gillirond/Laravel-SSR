@@ -11,7 +11,7 @@ class TaskPrioritiesTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('task_priorities')->insert([
+        DB::table('task_priorities')->insert([[
             'id' => 1,
             'order' => 1,
             'name' => 'Low'
@@ -23,6 +23,6 @@ class TaskPrioritiesTableSeeder extends Seeder
             'id' => 3,
             'order' => 3,
             'name' => 'High'
-        ]);
+        ]]);
     }
 }

@@ -13,11 +13,11 @@
 
 Route::auth();
 
-Route::group(['middleware' => 'auth'], function() {
+Route::middleware(['auth'])->group(function() {
     Route::get('/', 'TaskController@view');
-    Route::group(['prefix' => 'tasks'], function() {
-        Route::put('{id}', 'TaskController@edit')->where('id', '[0-9]+');
-        Route::delete('{id}', 'TaskController@delete')->where('id', '[0-9]+');
+    Route::prefix('tasks')->group(function() {
+        Route::put('{id}', 'TaskController@edit')->where(['id' => '[0-9]+']);
+        Route::delete('{id}', 'TaskController@delete')->where(['id' => '[0-9]+']);
         Route::post('/', 'TaskController@add');
     });
 });
