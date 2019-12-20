@@ -16,7 +16,7 @@ toc_footers:
 # Info
 
 Welcome to the generated API reference.
-[Get Postman Collection](http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/docs/collection.json)
+[Get Postman Collection](http://localhost/docs/collection.json)
 
 <!-- END_INFO -->
 
@@ -33,14 +33,14 @@ Get task list by search value, sort them by order and paginate(10 tasks per page
 
 ```bash
 curl -X GET \
-    -G "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/?search=mytask1&order_by=due_date&order_dir=desc&page=2" \
+    -G "http://localhost/?search=mytask1&order_by=due_date&order_dir=desc&page=2" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/"
+    "http://localhost/"
 );
 
 let params = {
@@ -88,7 +88,7 @@ Parameter | Status | Description
 
 <!-- END_53be1e9e10a08458929a2e0ea70ddb86 -->
 
-<!-- START_67dc355ff092054220edfb9d8292af16 -->
+<!-- START_6ceb8fec9e61831658364513b96fec8c -->
 ## Edit task by id
 
 Edit task by id. On success redirects to paginated, sorted view of tasks
@@ -97,7 +97,7 @@ Edit task by id. On success redirects to paginated, sorted view of tasks
 
 ```bash
 curl -X PUT \
-    "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/12?order_by=priority&order_dir=asc&page=3" \
+    "http://localhost/tasks/12?order_by=priority&order_dir=asc&page=3" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -d '{"title":"editedtasktitle","due_date":"2019-12-17 20:11:07","priority_id":3}'
@@ -106,7 +106,7 @@ curl -X PUT \
 
 ```javascript
 const url = new URL(
-    "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/12"
+    "http://localhost/tasks/12"
 );
 
 let params = {
@@ -140,7 +140,7 @@ fetch(url, {
 
 
 ### HTTP Request
-`PUT {id}`
+`PUT tasks/{id}`
 
 #### URL Parameters
 
@@ -161,9 +161,9 @@ Parameter | Type | Status | Description
         `due_date` | timestamp |  required  | The due date of edited task.
         `priority_id` | integer |  required  | The id of priority of edited task.
     
-<!-- END_67dc355ff092054220edfb9d8292af16 -->
+<!-- END_6ceb8fec9e61831658364513b96fec8c -->
 
-<!-- START_f0e85c6018721b104e81a7b978548aab -->
+<!-- START_eda7f527754e053f01e7644617878226 -->
 ## Delete task by id
 
 Deletes task by id. On success redirects to page1 unsorted tasks list
@@ -172,14 +172,14 @@ Deletes task by id. On success redirects to page1 unsorted tasks list
 
 ```bash
 curl -X DELETE \
-    "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/4" \
+    "http://localhost/tasks/4" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/4"
+    "http://localhost/tasks/4"
 );
 
 let headers = {
@@ -198,7 +198,7 @@ fetch(url, {
 
 
 ### HTTP Request
-`DELETE {id}`
+`DELETE tasks/{id}`
 
 #### URL Parameters
 
@@ -206,9 +206,9 @@ Parameter | Status | Description
 --------- | ------- | ------- | -------
     `id` |  required  | The id of the task.
 
-<!-- END_f0e85c6018721b104e81a7b978548aab -->
+<!-- END_eda7f527754e053f01e7644617878226 -->
 
-<!-- START_5e901bbc73b2f95e077625c8fdf1a97a -->
+<!-- START_71b4e9c93724a8c5c650c51c953e43da -->
 ## Adds new task
 
 Adds new task to tasks list and redirects to unsorted page #1 of tasks
@@ -217,7 +217,7 @@ Adds new task to tasks list and redirects to unsorted page #1 of tasks
 
 ```bash
 curl -X POST \
-    "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/" \
+    "http://localhost/tasks" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -d '{"title":"added task title","due_date":"2019-12-17 20:11:07","priority_id":2}'
@@ -226,7 +226,7 @@ curl -X POST \
 
 ```javascript
 const url = new URL(
-    "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/"
+    "http://localhost/tasks"
 );
 
 let headers = {
@@ -252,7 +252,7 @@ fetch(url, {
 
 
 ### HTTP Request
-`POST /`
+`POST tasks`
 
 #### Body Parameters
 Parameter | Type | Status | Description
@@ -261,7 +261,7 @@ Parameter | Type | Status | Description
         `due_date` | timestamp |  required  | The due date of added task.
         `priority_id` | integer |  required  | The id of priority of added task.
     
-<!-- END_5e901bbc73b2f95e077625c8fdf1a97a -->
+<!-- END_71b4e9c93724a8c5c650c51c953e43da -->
 
 #general
 
@@ -273,14 +273,14 @@ Parameter | Type | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/login" \
+    -G "http://localhost/login" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/login"
+    "http://localhost/login"
 );
 
 let headers = {
@@ -316,14 +316,14 @@ null
 
 ```bash
 curl -X POST \
-    "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/login" \
+    "http://localhost/login" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/login"
+    "http://localhost/login"
 );
 
 let headers = {
@@ -354,14 +354,14 @@ fetch(url, {
 
 ```bash
 curl -X POST \
-    "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/logout" \
+    "http://localhost/logout" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/logout"
+    "http://localhost/logout"
 );
 
 let headers = {
@@ -392,14 +392,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/register" \
+    -G "http://localhost/register" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/register"
+    "http://localhost/register"
 );
 
 let headers = {
@@ -435,14 +435,14 @@ null
 
 ```bash
 curl -X POST \
-    "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/register" \
+    "http://localhost/register" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/register"
+    "http://localhost/register"
 );
 
 let headers = {
@@ -473,14 +473,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/password/reset" \
+    -G "http://localhost/password/reset" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/password/reset"
+    "http://localhost/password/reset"
 );
 
 let headers = {
@@ -516,14 +516,14 @@ null
 
 ```bash
 curl -X POST \
-    "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/password/email" \
+    "http://localhost/password/email" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/password/email"
+    "http://localhost/password/email"
 );
 
 let headers = {
@@ -556,14 +556,14 @@ If no token is present, display the link request form.
 
 ```bash
 curl -X GET \
-    -G "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/password/reset/1" \
+    -G "http://localhost/password/reset/1" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/password/reset/1"
+    "http://localhost/password/reset/1"
 );
 
 let headers = {
@@ -599,14 +599,14 @@ null
 
 ```bash
 curl -X POST \
-    "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/password/reset" \
+    "http://localhost/password/reset" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/password/reset"
+    "http://localhost/password/reset"
 );
 
 let headers = {
@@ -637,14 +637,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/password/confirm" \
+    -G "http://localhost/password/confirm" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/password/confirm"
+    "http://localhost/password/confirm"
 );
 
 let headers = {
@@ -682,14 +682,14 @@ fetch(url, {
 
 ```bash
 curl -X POST \
-    "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/password/confirm" \
+    "http://localhost/password/confirm" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/password/confirm"
+    "http://localhost/password/confirm"
 );
 
 let headers = {

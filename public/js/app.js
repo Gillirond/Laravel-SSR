@@ -11,7 +11,7 @@
                     input.value = task[field];
                 }
             });
-            editForm.setAttribute('action', 'tasks/' + task.id);
+            editForm.setAttribute('action', editForm.getAttribute('action').split('tasks/')[0] + 'tasks/' + task.id);
         }
     };
     window.appTasks = appTasks;

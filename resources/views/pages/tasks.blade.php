@@ -169,7 +169,7 @@
     <div id="editTaskModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
-                <form name="editTaskForm" id="editTaskForm" action="{{url('tasks/'.$task['id'])}}" method="POST">
+                <form name="editTaskForm" id="editTaskForm" action="{{url('tasks/')}}" method="POST">
                     {{csrf_field()}}
                     {{method_field('PUT')}}
                     <input type="hidden" name="order_by"

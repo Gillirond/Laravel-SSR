@@ -2,7 +2,7 @@
     "variables": [],
     "info": {
         "name": "LaravelSsrProject API",
-        "_postman_id": "1a3cefec-7fd9-46df-9196-2aafa9a88d69",
+        "_postman_id": "6742c2ac-5f79-4a20-a7de-033c839ab82f",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.0.0\/collection.json"
     },
@@ -14,7 +14,7 @@
                 {
                     "name": "View tasks list",
                     "request": {
-                        "url": "http:\/\/bqq5qkyokw.5crm.ru\/Laravel-SSR-project\/public?search=mytask1&order_by=due_date&order_dir=desc&page=2",
+                        "url": "http:\/\/localhost?search=mytask1&order_by=due_date&order_dir=desc&page=2",
                         "method": "GET",
                         "header": [
                             {
@@ -37,7 +37,7 @@
                 {
                     "name": "Edit task by id",
                     "request": {
-                        "url": "http:\/\/bqq5qkyokw.5crm.ru\/Laravel-SSR-project\/public\/{id}?order_by=priority&order_dir=asc&page=3",
+                        "url": "http:\/\/localhost\/tasks\/{id}?order_by=priority&order_dir=asc&page=3",
                         "method": "PUT",
                         "header": [
                             {
@@ -60,7 +60,7 @@
                 {
                     "name": "Delete task by id",
                     "request": {
-                        "url": "http:\/\/bqq5qkyokw.5crm.ru\/Laravel-SSR-project\/public\/{id}",
+                        "url": "http:\/\/localhost\/tasks\/{id}",
                         "method": "DELETE",
                         "header": [
                             {
@@ -83,7 +83,7 @@
                 {
                     "name": "Adds new task",
                     "request": {
-                        "url": "http:\/\/bqq5qkyokw.5crm.ru\/Laravel-SSR-project\/public",
+                        "url": "http:\/\/localhost\/tasks",
                         "method": "POST",
                         "header": [
                             {
@@ -112,7 +112,7 @@
                 {
                     "name": "Show the application's login form.",
                     "request": {
-                        "url": "http:\/\/bqq5qkyokw.5crm.ru\/Laravel-SSR-project\/public\/login",
+                        "url": "http:\/\/localhost\/login",
                         "method": "GET",
                         "header": [
                             {
@@ -135,7 +135,7 @@
                 {
                     "name": "Handle a login request to the application.",
                     "request": {
-                        "url": "http:\/\/bqq5qkyokw.5crm.ru\/Laravel-SSR-project\/public\/login",
+                        "url": "http:\/\/localhost\/login",
                         "method": "POST",
                         "header": [
                             {
@@ -158,7 +158,7 @@
                 {
                     "name": "Log the user out of the application.",
                     "request": {
-                        "url": "http:\/\/bqq5qkyokw.5crm.ru\/Laravel-SSR-project\/public\/logout",
+                        "url": "http:\/\/localhost\/logout",
                         "method": "POST",
                         "header": [
                             {
@@ -181,7 +181,7 @@
                 {
                     "name": "Show the application registration form.",
                     "request": {
-                        "url": "http:\/\/bqq5qkyokw.5crm.ru\/Laravel-SSR-project\/public\/register",
+                        "url": "http:\/\/localhost\/register",
                         "method": "GET",
                         "header": [
                             {
@@ -204,7 +204,7 @@
                 {
                     "name": "Handle a registration request for the application.",
                     "request": {
-                        "url": "http:\/\/bqq5qkyokw.5crm.ru\/Laravel-SSR-project\/public\/register",
+                        "url": "http:\/\/localhost\/register",
                         "method": "POST",
                         "header": [
                             {
@@ -227,7 +227,7 @@
                 {
                     "name": "Display the form to request a password reset link.",
                     "request": {
-                        "url": "http:\/\/bqq5qkyokw.5crm.ru\/Laravel-SSR-project\/public\/password\/reset",
+                        "url": "http:\/\/localhost\/password\/reset",
                         "method": "GET",
                         "header": [
                             {
@@ -250,7 +250,7 @@
                 {
                     "name": "Send a reset link to the given user.",
                     "request": {
-                        "url": "http:\/\/bqq5qkyokw.5crm.ru\/Laravel-SSR-project\/public\/password\/email",
+                        "url": "http:\/\/localhost\/password\/email",
                         "method": "POST",
                         "header": [
                             {
@@ -273,7 +273,7 @@
                 {
                     "name": "Display the password reset view for the given token.",
                     "request": {
-                        "url": "http:\/\/bqq5qkyokw.5crm.ru\/Laravel-SSR-project\/public\/password\/reset\/{token}",
+                        "url": "http:\/\/localhost\/password\/reset\/{token}",
                         "method": "GET",
                         "header": [
                             {
@@ -296,7 +296,7 @@
                 {
                     "name": "Reset the given user's password.",
                     "request": {
-                        "url": "http:\/\/bqq5qkyokw.5crm.ru\/Laravel-SSR-project\/public\/password\/reset",
+                        "url": "http:\/\/localhost\/password\/reset",
                         "method": "POST",
                         "header": [
                             {
@@ -319,7 +319,7 @@
                 {
                     "name": "Display the password confirmation view.",
                     "request": {
-                        "url": "http:\/\/bqq5qkyokw.5crm.ru\/Laravel-SSR-project\/public\/password\/confirm",
+                        "url": "http:\/\/localhost\/password\/confirm",
                         "method": "GET",
                         "header": [
                             {
@@ -342,7 +342,7 @@
                 {
                     "name": "Confirm the given user's password.",
                     "request": {
-                        "url": "http:\/\/bqq5qkyokw.5crm.ru\/Laravel-SSR-project\/public\/password\/confirm",
+                        "url": "http:\/\/localhost\/password\/confirm",
                         "method": "POST",
                         "header": [
                             {

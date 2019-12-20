@@ -46,7 +46,7 @@
           <!-- START_INFO -->
 <h1>Info</h1>
 <p>Welcome to the generated API reference.
-<a href="http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/docs/collection.json">Get Postman Collection</a></p>
+<a href="http://localhost/docs/collection.json">Get Postman Collection</a></p>
 <!-- END_INFO -->
 <h1>Task management</h1>
 <p>API for managing tasks</p>
@@ -57,11 +57,11 @@
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/?search=mytask1&amp;order_by=due_date&amp;order_dir=desc&amp;page=2" \
+    -G "http://localhost/?search=mytask1&amp;order_by=due_date&amp;order_dir=desc&amp;page=2" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/"
+    "http://localhost/"
 );
 
 let params = {
@@ -125,20 +125,20 @@ fetch(url, {
 </tbody>
 </table>
 <!-- END_53be1e9e10a08458929a2e0ea70ddb86 -->
-<!-- START_67dc355ff092054220edfb9d8292af16 -->
+<!-- START_6ceb8fec9e61831658364513b96fec8c -->
 <h2>Edit task by id</h2>
 <p>Edit task by id. On success redirects to paginated, sorted view of tasks</p>
 <blockquote>
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X PUT \
-    "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/12?order_by=priority&amp;order_dir=asc&amp;page=3" \
+    "http://localhost/tasks/12?order_by=priority&amp;order_dir=asc&amp;page=3" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -d '{"title":"editedtasktitle","due_date":"2019-12-17 20:11:07","priority_id":3}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/12"
+    "http://localhost/tasks/12"
 );
 
 let params = {
@@ -168,7 +168,7 @@ fetch(url, {
     .then(response =&gt; response.json())
     .then(json =&gt; console.log(json));</code></pre>
 <h3>HTTP Request</h3>
-<p><code>PUT {id}</code></p>
+<p><code>PUT tasks/{id}</code></p>
 <h4>URL Parameters</h4>
 <table>
 <thead>
@@ -244,19 +244,19 @@ fetch(url, {
 </tr>
 </tbody>
 </table>
-<!-- END_67dc355ff092054220edfb9d8292af16 -->
-<!-- START_f0e85c6018721b104e81a7b978548aab -->
+<!-- END_6ceb8fec9e61831658364513b96fec8c -->
+<!-- START_eda7f527754e053f01e7644617878226 -->
 <h2>Delete task by id</h2>
 <p>Deletes task by id. On success redirects to page1 unsorted tasks list</p>
 <blockquote>
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X DELETE \
-    "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/4" \
+    "http://localhost/tasks/4" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/4"
+    "http://localhost/tasks/4"
 );
 
 let headers = {
@@ -271,7 +271,7 @@ fetch(url, {
     .then(response =&gt; response.json())
     .then(json =&gt; console.log(json));</code></pre>
 <h3>HTTP Request</h3>
-<p><code>DELETE {id}</code></p>
+<p><code>DELETE tasks/{id}</code></p>
 <h4>URL Parameters</h4>
 <table>
 <thead>
@@ -289,21 +289,21 @@ fetch(url, {
 </tr>
 </tbody>
 </table>
-<!-- END_f0e85c6018721b104e81a7b978548aab -->
-<!-- START_5e901bbc73b2f95e077625c8fdf1a97a -->
+<!-- END_eda7f527754e053f01e7644617878226 -->
+<!-- START_71b4e9c93724a8c5c650c51c953e43da -->
 <h2>Adds new task</h2>
 <p>Adds new task to tasks list and redirects to unsorted page #1 of tasks</p>
 <blockquote>
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X POST \
-    "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/" \
+    "http://localhost/tasks" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -d '{"title":"added task title","due_date":"2019-12-17 20:11:07","priority_id":2}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/"
+    "http://localhost/tasks"
 );
 
 let headers = {
@@ -325,7 +325,7 @@ fetch(url, {
     .then(response =&gt; response.json())
     .then(json =&gt; console.log(json));</code></pre>
 <h3>HTTP Request</h3>
-<p><code>POST /</code></p>
+<p><code>POST tasks</code></p>
 <h4>Body Parameters</h4>
 <table>
 <thead>
@@ -357,7 +357,7 @@ fetch(url, {
 </tr>
 </tbody>
 </table>
-<!-- END_5e901bbc73b2f95e077625c8fdf1a97a -->
+<!-- END_71b4e9c93724a8c5c650c51c953e43da -->
 <h1>general</h1>
 <!-- START_66e08d3cc8222573018fed49e121e96d -->
 <h2>Show the application&#039;s login form.</h2>
@@ -365,11 +365,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/login" \
+    -G "http://localhost/login" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/login"
+    "http://localhost/login"
 );
 
 let headers = {
@@ -396,11 +396,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X POST \
-    "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/login" \
+    "http://localhost/login" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/login"
+    "http://localhost/login"
 );
 
 let headers = {
@@ -423,11 +423,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X POST \
-    "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/logout" \
+    "http://localhost/logout" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/logout"
+    "http://localhost/logout"
 );
 
 let headers = {
@@ -450,11 +450,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/register" \
+    -G "http://localhost/register" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/register"
+    "http://localhost/register"
 );
 
 let headers = {
@@ -481,11 +481,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X POST \
-    "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/register" \
+    "http://localhost/register" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/register"
+    "http://localhost/register"
 );
 
 let headers = {
@@ -508,11 +508,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/password/reset" \
+    -G "http://localhost/password/reset" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/password/reset"
+    "http://localhost/password/reset"
 );
 
 let headers = {
@@ -539,11 +539,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X POST \
-    "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/password/email" \
+    "http://localhost/password/email" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/password/email"
+    "http://localhost/password/email"
 );
 
 let headers = {
@@ -567,11 +567,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/password/reset/1" \
+    -G "http://localhost/password/reset/1" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/password/reset/1"
+    "http://localhost/password/reset/1"
 );
 
 let headers = {
@@ -598,11 +598,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X POST \
-    "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/password/reset" \
+    "http://localhost/password/reset" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/password/reset"
+    "http://localhost/password/reset"
 );
 
 let headers = {
@@ -625,11 +625,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/password/confirm" \
+    -G "http://localhost/password/confirm" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/password/confirm"
+    "http://localhost/password/confirm"
 );
 
 let headers = {
@@ -658,11 +658,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X POST \
-    "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/password/confirm" \
+    "http://localhost/password/confirm" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://bqq5qkyokw.5crm.ru/Laravel-SSR-project/public/password/confirm"
+    "http://localhost/password/confirm"
 );
 
 let headers = {
